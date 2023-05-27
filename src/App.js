@@ -5,11 +5,12 @@ import Error from './pages/Error';
 import SelectHire from './pages/SelectHire';
 import SelectSkill from './pages/SelectSkill';
 import Layout from './components/Layout/Layout';
+import Protected from './components/Protected';
 function App() {
   return (
     <Routes>
       <Route path="/" element={<SignUp />} />
-      <Route element={<Layout />}>
+      <Route element={<Protected><Layout /></Protected>}>
         <Route path="/hire" element={<SelectHire />} />
         <Route path="/skills" element={<SelectSkill />} />
       </Route>

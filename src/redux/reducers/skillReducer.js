@@ -1,7 +1,6 @@
 import { createSlice } from '@reduxjs/toolkit'
 
 const initialState = {
-    title: "designer"
 }
 
 export const SkillReducer = createSlice({

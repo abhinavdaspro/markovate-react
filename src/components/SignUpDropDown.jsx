@@ -4,6 +4,26 @@ import { HiOutlineChevronDown } from "react-icons/hi"
 
 
 export const SignUpDropDown = (props) => {
+
+    const handleSelect = (option) => {
+        switch (props.type) {
+            case "size": {
+                props.setFormData(prev => ({
+                    ...prev,
+                    companySize: option
+                }))
+                break;
+            }
+            case "revenue": {
+                props.setFormData(prev => ({
+                    ...prev,
+                    companyRevenue: option
+                }))
+                break;
+            }
+            default: break;
+        }
+    }
     return (
         <Menu as="div" className="relative inline-block">
             <div>
@@ -27,6 +47,9 @@ export const SignUpDropDown = (props) => {
                             <div>
                                 {props.data.map((val, i) => {
                                     return <button key={i}
+                                        onClick={() => {
+                                            handleSelect(val)
+                                        }}
                                         className={`text-black group flex w-full items-center rounded-md px-2 py-2 text-sm`}
                                     >
                                         {val}
