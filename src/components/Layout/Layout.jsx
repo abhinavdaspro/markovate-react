@@ -8,7 +8,7 @@ const Layout = () => {
         <div className='flex min-h-screen h-full lg:h-screen w-full flex-col lg:flex-row bg-white overflow-y-auto lg:overflow-y-hidden'>
             <div className='w-full h-full  lg:overflow-y-scroll '>
                 <div className='h-16 w-full bg-transparent flex items-center px-16'>
-                    {/* <img src={FavIcon} alt="banner-img" /> */}
+                    <img src={FavIcon} alt="banner-img" />
                 </div>
                 <div className='mt-10 px-12 w-full pb-14'>
                     <Outlet />
@@ -19,11 +19,11 @@ const Layout = () => {
                     <div className='w-20 lg:w-36 h-20 lg:h-36 mt-10 lg:mt-20 border-[2px] rounded-full border-white shadow-lg shadow-gray-950'>
                         <img src={Profile} alt="profile" />
                     </div>
-                    {/* <p className='text-white font-medium text-xs lg:text-base mt-5 lg:mt-10'>Edward Pascual, PSM</p> */}
-                    {/* <p className='text-gray-500 text-xs lg:text-sm mt-2 lg:mt-5 text-center mb-10 lg:mb-0'>Project Manager at Trapeze Group</p> */}
+                    <p className='text-white font-medium text-xs lg:text-base mt-5 lg:mt-10'>Edward Pascual, PSM</p>
+                    <p className='text-gray-500 text-xs lg:text-sm mt-2 lg:mt-5 text-center mb-10 lg:mb-0'>Project Manager at Trapeze Group</p>
                 </div>
                 <div className='flex justify-center w-[50%] lg:w-full'>
-                    <p className='text-white text-center lg:mt-20  lg:px-[20%]  w-[60%] lg:w-auto text-xs sm:text-base'>“ The excellent design and stability of the app has pleased internal stakeholders. We are very happy with their service. ”</p>
+                    <p className='text-white text-center lg:mt-20  lg:px-[20%]  w-[60%] lg:w-auto text-xs sm:text-base'>“ The excellent design and stability of the app has pleased internal stakeholders. We are very happy with their service.”</p>
                 </div>
 
 

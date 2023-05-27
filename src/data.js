@@ -1,18 +1,89 @@
 export const data = [
     {
         title: "Engineering",
-        description: "Head of Engineering, CTO, VP of Engineering, Tech Lead"
+        description: "Head of Engineering, CTO, VP of Engineering, Tech Lead",
+        skills: ["Technical Problem Solving", "Mathematics", "Critical Thinking", "Creativity", "Analytical Skills", "Attention to Detail", "Computer Programming", "Data Analysis", "Project Management", "Communication Skills", "Collaboration", "Troubleshooting", "Research", "Design", "Prototyping", "Testing", "Documentation", "Continuous Learning", "Adaptability", "Leadership"]
+
     },
     {
         title: "Designers",
-        description: "Web, Mobile, UI/UX, Branding, and Visual Designers"
+        description: "Web, Mobile, UI/UX, Branding, and Visual Designers",
+        skills: [
+            "Graphic design",
+            "UI/UX design",
+            "Typography",
+            "Color theory",
+            "Layout design",
+            "Branding",
+            "Logo design",
+            "Illustration",
+            "Digital art",
+            "Print design",
+            "Web design",
+            "Mobile app design",
+            "Prototyping",
+            "Wireframing",
+            "Design thinking",
+            "User research",
+            "User-centered design",
+            "Information architecture",
+            "Interaction design",
+            "Visual communication",
+            "Photo editing",
+            "Adobe Creative Suite",
+            "Sketch",
+            "Figma",
+            "InVision",
+            "Prototyping tools",
+            "HTML/CSS",
+            "Responsive design",
+            "Motion graphics",
+            "Animation",
+            "Video editing",
+            "Attention to detail",
+            "Problem-solving",]
     },
     {
         title: "DevOps",
-        description: "DevOps Engineer, DevOps Manager, Head of Infra"
+        description: "DevOps Engineer, DevOps Manager, Head of Infra",
+        skills: ["Continuous Integration and Continuous Deployment (CI/CD)",
+            "Infrastructure as Code (IaC)",
+            "Configuration Management",
+            "Containerization (Docker, Kubernetes)",
+            "Cloud Platforms (AWS, Azure, GCP)",
+            "Scripting and Automation (Bash, Python, PowerShell)",
+            "Version Control Systems (Git, SVN)",
+            "Monitoring and Logging (Prometheus, ELK Stack)",
+            "Release Management",
+            "Agile/Scrum Methodologies",
+            "Collaboration and Communication (Slack, Jira)",
+            "Security and Compliance",
+            "Networking Fundamentals",
+            "Troubleshooting and Debugging",
+            "Performance Optimization",
+            "Database Administration",]
     },
     {
         title: "Product Managers",
-        description: "Digital Product Managers, Product Owners, and Business Analysts"
+        description: "Digital Product Managers, Product Owners, and Business Analysts",
+        skills: ['Product strategy development',
+            'Market research and analysis',
+            'User research and persona development',
+            'Product roadmap creation and management',
+            'Product requirement gathering and documentation',
+            'Agile methodologies (Scrum, Kanban, etc.)',
+            'Cross-functional team collaboration',
+            'Stakeholder management',
+            'Project management',
+            'Data analysis and interpretation',
+            'User experience (UX) design',
+            'Product pricing and monetization strategies',
+            'Competitive analysis',
+            'Product marketing and go-to-market strategy',
+            'A/B testing and experimentation',
+            'Problem-solving and critical thinking',
+            'Excellent communication and presentation skills',
+            'Leadership and decision-making',
+            'Technical understanding and knowledge',]
     }
 ]
