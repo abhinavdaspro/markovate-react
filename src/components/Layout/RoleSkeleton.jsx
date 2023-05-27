@@ -3,12 +3,9 @@ import React from 'react'
 const RoleSkeleton = () => {
     let arr = [1, 2, 3]
     return (
-        arr.map((val, i) => {
-            return <div key={i} className='border border-gray-light rounded px-10 py-5 flex'>
-
-            </div>
-        })
-
+        <div className='mt-10'>{arr.map((val, i) => {
+            return <div key={i} className='border border-gray-light rounded h-20 flex mb-5 bg-gray-300 animate-pulse' />
+        })}</div>
     )
 }
 

@@ -16,7 +16,7 @@ const SelectHire = () => {
     const [loading, setLoading] = useState(false)
 
     useEffect(() => {
-        // fetchSkills();
+        fetchSkills();
     }, [])
 
     const handleNext = () => {
@@ -55,7 +55,7 @@ const SelectHire = () => {
             <p className='text-black text-2xl font-bold'>Thank you for your interest in Markovate.</p>
             <p className='text-black mt-10 font-normal text-xl'>What role would you like to hire?</p>
 
-            {!loading && <RoleSkeleton />}
+            {loading && <RoleSkeleton />}
             <div className='mt-10 flex flex-col gap-y-10'>
                 {roles.length > 0 && roles.map((val, i) => {
                     return <div key={i} className='border border-gray-light rounded px-10 py-5 flex'>
