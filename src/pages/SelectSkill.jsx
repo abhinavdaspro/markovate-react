@@ -14,8 +14,8 @@ const SelectSkill = () => {
     const skill = useSelector(state => state.skills)
     const [final, setFinal] = useState([])
     const [selectedRole, setSelectedRole] = useState({
-        title: skill?.title || "",
-        skills: skill?.skills || []
+        title: skill.title || "",
+        skills: skill.skills || []
     })
 
     useEffect(() => {
@@ -56,7 +56,7 @@ const SelectSkill = () => {
             </div>
 
             <div className='flex flex-wrap gap-5 mt-10'>
-                {selectedRole.skills.map((val, i) => {
+                {selectedRole.skills?.length > 0 && selectedRole.skills.map((val, i) => {
                     return <button
                         onClick={() => {
                             setFinal([...new Set([...final, val])])
