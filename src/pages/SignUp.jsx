@@ -43,6 +43,14 @@ export const SignUp = () => {
             toast.error("Please enter a valid email address.");
             return;
         }
+        if (formData.primaryNumber && formData.primaryNumber.length < 10) {
+            toast.error("Please enter a valid contact number.");
+            return;
+        }
+        if (formData.secondaryNumber && formData.secondaryNumber.length < 10) {
+            toast.error("Please enter a valid optional contact number.");
+            return;
+        }
 
         if (!formData.agreement) {
             toast.error("Please check the agreements.");
@@ -108,17 +116,26 @@ export const SignUp = () => {
                         <div className='grid grid-cols-1 sm:grid-cols-2 gap-x-5 gap-y-5'>
                             <input
                                 value={formData.primaryNumber}
-                                onChange={(e) => setFormData(prev => ({
-                                    ...prev,
-                                    primaryNumber: e.target.value
-                                }))} type="number" className='border border-gray-light rounded focus:outline-none py-[0.3rem] px-4 font-normal text-gray-dark placeholder:text-gray-dark'
+                                onChange={(e) => {
+                                    if (e.target.value.length < 11) {
+                                        setFormData(prev => ({
+                                            ...prev,
+                                            primaryNumber: e.target.value
+                                        }))
+                                    }
+                                }}
+                                type="number" className='border border-gray-light rounded focus:outline-none py-[0.3rem] px-4 font-normal text-gray-dark placeholder:text-gray-dark'
                                 placeholder='Contact no.' />
                             <input
                                 value={formData.secondaryNumber}
-                                onChange={(e) => setFormData(prev => ({
-                                    ...prev,
-                                    secondaryNumber: e.target.value
-                                }))} type="number" className='border border-gray-light rounded focus:outline-none py-[0.3rem] px-4 font-normal text-gray-dark placeholder:text-gray-dark'
+                                onChange={(e) => {
+                                    if (e.target.value.length < 11) {
+                                        setFormData(prev => ({
+                                            ...prev,
+                                            secondaryNumber: e.target.value
+                                        }))
+                                    }
+                                }} type="number" className='border border-gray-light rounded focus:outline-none py-[0.3rem] px-4 font-normal text-gray-dark placeholder:text-gray-dark'
                                 placeholder='Contact no. (optional)' />
                         </div>
                         <div className='grid grid-cols-1 sm:grid-cols-2 gap-x-5 gap-y-5'>

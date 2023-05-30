@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useCallback, useEffect, useState } from 'react'
 import { data } from '../data'
 import { useNavigate } from 'react-router'
 import { useDispatch, useSelector } from 'react-redux';
@@ -31,7 +31,7 @@ const SelectHire = () => {
         dispatch(setSkill(option))
     }
 
-    const fetchSkills = () => {
+    const fetchSkills = useCallback(() => {
         setLoading(true);
         let headers = {
             headers: {
@@ -49,7 +49,8 @@ const SelectHire = () => {
             toast.warning("Something went wrong. Please try after sometime.")
             setLoading(false)
         })
-    }
+    }, [])
+
     return (
         <div>
             <p className='text-black text-2xl font-bold'>Thank you for your interest in Markovate.</p>
