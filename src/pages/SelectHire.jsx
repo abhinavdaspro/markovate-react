@@ -38,7 +38,7 @@ const SelectHire = () => {
                 Authorization: localStorage.getItem('token')
             }
         }
-        let url = `${Config.url}/skill/find`;
+        let url = `${Config.url}/api/skill/find`;
         setLoading(true)
         axios.get(url, headers).then(res => {
             setLoading(false)

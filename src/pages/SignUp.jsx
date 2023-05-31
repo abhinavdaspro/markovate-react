@@ -58,7 +58,7 @@ export const SignUp = () => {
         }
         setLoading(true)
 
-        let url = `${Config.url}/user/register`
+        let url = `${Config.url}/api/user/register`
 
         axios.post(url, formData).then(res => {
             // console.log("success---", res.data);
